@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUB.1 Ensambla e Instala Controladores y Dispositivos Periféricos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #005a9c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0073e6;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #005bb5;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .tabcontent.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #e6e6e6;
+      padding: 20px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 40px;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #005a9c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .link-button:hover {
+      background-color: #003f73;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SUB.1 Ensambla e Instala Controladores y Dispositivos Periféricos</h1>
+  <p>CETis N.40</p>
+</header>
+
+<nav>
+  <button onclick="showTab('parcial1')">1er Parcial</button>
+  <button onclick="showTab('parcial2')">2do Parcial</button>
+  <button onclick="showTab('parcial3')">3er Parcial</button>
+</nav>
+
+<div id="parcial1" class="tabcontent active">
+  <h2>1er Parcial</h2>
+  <p>Haz clic en el siguiente botón para acceder al contenido del primer parcial:</p>
+  <a class="link-button" href="https://bochix.my.canva.site/" target="_blank">Ir al 1er Parcial</a>
+</div>
+
+<div id="parcial2" class="tabcontent">
+  <h2>2do Parcial</h2>
+  <p>Haz clic en el siguiente botón para acceder al contenido del segundo parcial:</p>
+  <a class="link-button" href="https://bochix.my.canva.site/bochix" target="_blank">Ir al 2do Parcial</a>
+</div>
+
+<div id="parcial3" class="tabcontent">
+  <h2>3er Parcial</h2>
+  <p>Haz clic en el siguiente botón para acceder al contenido del tercer parcial:</p>
+  <a class="link-button" href="https://bochix.my.canva.site/bochix-" target="_blank">Ir al 3er Parcial</a>
+</div>
+
+<footer>
+  <p>Docente: ING. JORGE ERNESTO LÓPEZ</p>
+  <p>Página hecha por: Yahel Jesús Rodríguez Arias</p>
+  <p>Grupo: 2A Soporte y Mantenimiento en Equipos de Cómputo</p>
+  <p>Turno: Matutino</p>
+</footer>
+
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tabcontent');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    const currentTab = document.getElementById(tabId);
+    if (currentTab) {
+      currentTab.classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
